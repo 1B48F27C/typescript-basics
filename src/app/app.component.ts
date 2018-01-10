@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'typescript-basics app';
+  basics_list: string[] = [
+    "Basic Types",
+    "Variables",
+    "Interfaces",
+    "Classes",
+    "Functions",
+    "Generics",
+    "Enums",
+    "Manipulations with Types",
+    "Symbols",
+    "Iterators and Generators",
+    "Namespaces and Modules",
+    "Decorators"
+  ];
 }
