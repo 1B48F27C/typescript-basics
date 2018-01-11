@@ -5,19 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  basics_list: string[] = [
-    "Basic Types",
-    "Variables",
-    "Interfaces",
-    "Classes",
-    "Functions",
-    "Generics",
-    "Enums",
-    "Manipulations with Types",
-    "Symbols",
-    "Iterators and Generators",
-    "Namespaces and Modules",
-    "Decorators"
-  ];
+export class AppComponent {  
 }
