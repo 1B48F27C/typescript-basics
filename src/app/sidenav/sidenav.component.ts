@@ -18,7 +18,6 @@ export class SidenavComponent {
        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`);
 
   fillerNav: string[] = [
-         "Basic Types",
          "Variables",
          "Interfaces",
          "Classes",
@@ -46,8 +45,3 @@ export class SidenavComponent {
 
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 }
-
-
-/**  Copyright 2017 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license */

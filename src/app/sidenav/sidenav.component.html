@@ -1,7 +1,9 @@
 <div class="container" [class.is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="accent" class="toolbar">
+  <mat-toolbar color="primary" class="toolbar">
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    <h1 class="app-name">Typescript. Basic Concepts</h1>
+    <a routerLink="" style="text-decoration: none">
+      <h1 class="app-name">TypeScript. Basic concepts</h1>
+    </a>
   </mat-toolbar>
 
   <mat-sidenav-container class="sidenav-container"
@@ -10,16 +12,24 @@
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
                  class="sidenav">
       <mat-nav-list>
-        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+        <a mat-list-item routerLink="basictypes">Basic types</a>
+        <a mat-list-item routerLink="variables">Variables</a>
+        <a mat-list-item routerLink="interfaces">Interfaces</a>
+        <a mat-list-item routerLink="classes">Classes</a>
+        <a mat-list-item routerLink="functions">Functions</a>
+        <a mat-list-item routerLink="generics">Generics</a>
+        <a mat-list-item routerLink="enums">Enums</a>
+        <a mat-list-item routerLink="manipulations">Manipulations with Types</a>
+        <a mat-list-item routerLink="symbols">Symbols</a>
+        <a mat-list-item routerLink="iterators">Iterators and Generators</a>
+        <a mat-list-item routerLink="modules">Namespaces and Modules</a>
+        <a mat-list-item routerLink="decorators">Decorators</a>
       </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content>
-      <p *ngFor="let content of fillerContent">{{content}}</p>
-    </mat-sidenav-content>
+    <div class="outlet">
+      <router-outlet></router-outlet>
+    </div>
+
   </mat-sidenav-container>
 </div>
-
-<!-- Copyright 2017 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license -->
