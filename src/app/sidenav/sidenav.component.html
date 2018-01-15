@@ -2,7 +2,7 @@
   <mat-toolbar color="primary" class="toolbar">
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
     <a routerLink="" style="text-decoration: none">
-      <h1 class="app-name">TypeScript. Basic concepts</h1>
+      <h1 class="app-name">TypeScript</h1>
     </a>
   </mat-toolbar>
 
@@ -26,10 +26,15 @@
         <a mat-list-item routerLink="decorators">Decorators</a>
       </mat-nav-list>
     </mat-sidenav>
-
+    
+    <div class="content-container">
     <div class="outlet">
-      <router-outlet></router-outlet>
-    </div>
+        <router-outlet></router-outlet>
+    </div></div>
 
   </mat-sidenav-container>
+
+  <div class="footer-container">
+    <h6 class="footer-content">Made by IvanM (c)</h6>
+  </div>
 </div>

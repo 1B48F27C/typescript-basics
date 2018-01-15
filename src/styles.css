@@ -1,1 +1,22 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.code-place {
+    background-color: lightblue;
+    border: black;
+}
+
+.footer-container {
+  background-color: #294E80;
+  z-index: 1000;
+  color: white;  
+}
+
+.outlet {
+    align-self: center;
+    max-width: 767px;
+}
+
+.footer-content {
+  text-align: right;
+  margin-right: 50px;
+}

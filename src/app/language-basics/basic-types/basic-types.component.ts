@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicTypesComponent implements OnInit {
 
+  fillerContent = Array(50).fill(0).map(() =>
+      `Text sample. Text sample. Text sample. Text sample. Text sample. Text sample. Text sample. Text sample.
+       Text sample. Text sample. Text sample. Text sample. Text sample. Text sample. Text sample. Text sample.
+       Text sample. Text sample. Text sample. Text sample. Text sample. Text sample. Text sample. Text sample.
+       Text sample. Text sample. Text sample. Text sample. Text sample. Text sample. Text sample. Text sample.
+       Text sample. Text sample. Text sample. Text sample.
+       `);
+
   constructor() { }
 
   ngOnInit() {
