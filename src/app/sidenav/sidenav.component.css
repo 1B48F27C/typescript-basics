@@ -5,7 +5,7 @@
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;  
+  right: 0;
 }
 
 .is-mobile .toolbar {
@@ -16,7 +16,8 @@
 h1.app-name {
   margin-left: 8px;
   color: white;
-  style: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24pt;
 }
 
 .sidenav-container {
