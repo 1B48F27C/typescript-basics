@@ -37,7 +37,7 @@ h1.app-name {
   height: auto;
 }
 
-.content-container {
+.outlet-container {
   max-width: 800px;
   margin: auto;
 }

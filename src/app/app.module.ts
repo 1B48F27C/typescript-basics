@@ -110,7 +110,7 @@ export class MaterialModule {}
     IteratorsComponent,
     ModulesComponent,
     DecoratorsComponent,
-    StartPageComponent
+    StartPageComponent    
   ],
   imports: [
     BrowserModule,

@@ -11,9 +11,9 @@
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
                  class="sidenav">
-      <mat-nav-list>
+      <mat-nav-list>        
         <a mat-list-item routerLink="basictypes">Basic types</a>
-        <a mat-list-item routerLink="variables">Variables</a>
+        <a mat-list-item routerLink="variables">Variable Declarations</a>
         <a mat-list-item routerLink="interfaces">Interfaces</a>
         <a mat-list-item routerLink="classes">Classes</a>
         <a mat-list-item routerLink="functions">Functions</a>
@@ -23,17 +23,16 @@
         <a mat-list-item routerLink="symbols">Symbols</a>
         <a mat-list-item routerLink="iterators">Iterators and Generators</a>
         <a mat-list-item routerLink="modules">Namespaces and Modules</a>
-        <a mat-list-item routerLink="decorators">Decorators</a>
+        <a mat-list-item routerLink="decorators">Decorators</a>        
       </mat-nav-list>
     </mat-sidenav>
     
-    <div class="content-container">
-    <div class="outlet">
-        <router-outlet></router-outlet>
-    </div></div>
-
+    <div class="outlet-container">
+      <router-outlet></router-outlet>
+    </div>
+    
   </mat-sidenav-container>
-
+    
   <div class="footer-container">
     <h6 class="footer-content">Made by IvanM (c)</h6>
   </div>

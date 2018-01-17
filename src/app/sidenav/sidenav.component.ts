@@ -1,28 +1,17 @@
-import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component} from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { ChangeDetectorRef, OnInit, Component, Input } from '@angular/core';
 
 /** @title Responsive sidenav */
 @Component({
   selector: 'sidenav',
   templateUrl: 'sidenav.component.html',
-  styleUrls: ['sidenav.component.css'],
+  styleUrls: ['sidenav.component.css']
 })
-export class SidenavComponent {
-  mobileQuery: MediaQueryList;
+export class SidenavComponent implements OnInit {
+  @Input() currName: string;
 
-  fillerNav: string[] = [
-         "Variables",
-         "Interfaces",
-         "Classes",
-         "Functions",
-         "Generics",
-         "Enums",
-         "Manipulations with Types",
-         "Symbols",
-         "Iterators and Generators",
-         "Namespaces and Modules",
-         "Decorators"
-  ];
+  mobileQuery: MediaQueryList;
+  currentContent: string;
 
   private _mobileQueryListener: () => void;
 
@@ -34,6 +23,9 @@ export class SidenavComponent {
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  ngOnInit() {
   }
 
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
