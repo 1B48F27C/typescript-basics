@@ -12,18 +12,7 @@
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
                  class="sidenav">
       <mat-nav-list>
-        <a mat-list-item routerLink="basictypes">Basic types</a>
-        <a mat-list-item routerLink="variables">Variable Declarations</a>
-        <a mat-list-item routerLink="interfaces">Interfaces</a>
-        <a mat-list-item routerLink="classes">Classes</a>
-        <a mat-list-item routerLink="functions">Functions</a>
-        <a mat-list-item routerLink="generics">Generics</a>
-        <a mat-list-item routerLink="enums">Enums</a>
-        <a mat-list-item routerLink="manipulations">Manipulations with Types</a>
-        <a mat-list-item routerLink="symbols">Symbols</a>
-        <a mat-list-item routerLink="iterators">Iterators and Generators</a>
-        <a mat-list-item routerLink="modules">Namespaces and Modules</a>
-        <a mat-list-item routerLink="decorators">Decorators</a>
+        <p-panelMenu [model]="items" [style]="{}"></p-panelMenu>
       </mat-nav-list>
     </mat-sidenav>
 

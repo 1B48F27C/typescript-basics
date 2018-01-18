@@ -1,6 +1,7 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import '../node_modules/primeng/resources/primeng.min.css';
 @import '../node_modules/primeng/resources/themes/omega/theme.css';
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
 
 .code-place {
     border: 1px solid #DDDDDD;

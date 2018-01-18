@@ -15,6 +15,8 @@ export class SidenavComponent implements OnInit {
 
   private _mobileQueryListener: () => void;
 
+  items: MenuItem[];
+
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -26,6 +28,61 @@ export class SidenavComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.items = [
+            {
+              label: 'Basic Concepts',
+              items: [
+                {
+                  label: 'Basic types',
+                  routerLink: "basictypes"
+                },
+                {
+                  label: 'Variable Declarations',
+                  routerLink: "variables"
+                },
+                {
+                  label: 'Interfaces',
+                  routerLink: "interfaces"
+                },
+                {
+                  label: 'Classes',
+                  routerLink: "classes"
+                },
+                {
+                  label: 'Functions',
+                  routerLink: "functions"
+                },
+                {
+                  label: 'Generics',
+                  routerLink: "generics"
+                },
+                {
+                  label: 'Enums',
+                  routerLink: "enums"
+                },
+                {
+                  label: 'Manipulations with Types',
+                  routerLink: "manipulations"
+                },
+                {
+                  label: 'Symbols',
+                  routerLink: "symbols"
+                },
+                {
+                  label: 'Iterators and Generators',
+                  routerLink: "iterators"
+                },
+                {
+                  label: 'Namespaces and Modules',
+                  routerLink: "modules"
+                },
+                {
+                  label: 'Decorators',
+                  routerLink: "decorators"
+                }
+              ]
+            }
+        ];
   }
 
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));

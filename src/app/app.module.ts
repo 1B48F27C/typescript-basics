@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { AccordionModule } from 'primeng/accordion';
-import { MenuItem } from 'primeng/api';
+import {PanelMenuModule} from 'primeng/panelmenu';
+import {MenuItem} from 'primeng/api';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
@@ -123,7 +123,7 @@ export class MaterialModule {}
     MatNativeDateModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    AccordionModule
+    PanelMenuModule
   ],
   entryComponents: [SidenavComponent],
   providers: [],
