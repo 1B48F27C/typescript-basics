@@ -15,8 +15,6 @@ export class SidenavComponent implements OnInit {
 
   private _mobileQueryListener: () => void;
 
-  items: MenuItem[];
-
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -29,6 +27,10 @@ export class SidenavComponent implements OnInit {
 
   ngOnInit() {
     this.items = [
+            {
+              label: 'Dashboard',
+              items: []
+            },
             {
               label: 'Basic Concepts',
               items: [
@@ -81,6 +83,10 @@ export class SidenavComponent implements OnInit {
                   routerLink: "decorators"
                 }
               ]
+            },
+            {
+              label: 'Samples',
+              items: []
             }
         ];
   }
