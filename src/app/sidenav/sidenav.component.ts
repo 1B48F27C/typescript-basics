@@ -30,8 +30,7 @@ export class SidenavComponent implements OnInit {
   ngOnInit() {
     this.items = [
             {
-              label: 'Dashboard',
-              items: []
+              label: 'Dashboard'
             },
             {
               label: 'Basic Concepts',
