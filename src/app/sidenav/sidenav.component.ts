@@ -13,6 +13,8 @@ export class SidenavComponent implements OnInit {
   mobileQuery: MediaQueryList;
   currentContent: string;
 
+  items: {};
+
   private _mobileQueryListener: () => void;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
