@@ -63,14 +63,14 @@ export const LET_DECLARATION_SAMPLES: string[] = [
     let a;`
     ,
     `// another example of 'let' declaration restriction
+// illegal call 'foo' before 'a' is declared
 
     function foo() {
         // okay to capture 'a'
         return a;
     }
-    
-// illegal call 'foo' before 'a' is declared
-    // runtimes should throw an error here
+
+// runtimes should throw an error here
     foo();
     
     let a;`
