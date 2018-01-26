@@ -1,5 +1,11 @@
 <div class="body-content">
   <h2>Variable Declarations</h2>
+  <hr>
+  <h4>LET and VAR</h4>
+  <p>The main difference between <strong>var</strong> and <strong>let</strong> varables declaration is a scoping behaviour.</p>
+  <p>When variable is declared using <strong>let</strong>, it uses what is called <i>lexical-scoping</i> or <i>block-scoping</i>. 
+  Unlike variables declared with <strong>var</strong> whose scopes leak out of their containing block, block-scoped variables 
+  are not visible outside of their neares containing block.</p>
   <h4><i>var</i> declarations</h4>
   <div *ngFor="let sample of varSamples">
     <div class="code-place">
@@ -9,6 +15,17 @@
   </div>
   <h4><i>let</i> declarations</h4>
   <div *ngFor="let sample of letSamples">
+    <div class="code-place">
+      <pre>{{sample}}</pre>
+    </div>
+    <br>
+  </div>
+  <hr>
+  <h4>CONST declaration</h4>
+  <p><strong>const</strong> is like <strong>let</strong> declaration but, as their name implies, their variables cannot be changed 
+  after thay were assigned.</p>
+  <p>Here is some examples: </p>
+  <div *ngFor="let sample of constSamples">
     <div class="code-place">
       <pre>{{sample}}</pre>
     </div>

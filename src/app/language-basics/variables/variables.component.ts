@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VAR_DECLARATION_SAMPLES, LET_DECLARATION_SAMPLES } from './mock.variables';
+import { VAR_DECLARATION_SAMPLES, LET_DECLARATION_SAMPLES, CONST_DECLARATION_SAMPLES } from './mock.variables';
 
 @Component({
   selector: 'app-variables',
@@ -10,6 +10,7 @@ export class VariablesComponent implements OnInit {
 
   varSamples = VAR_DECLARATION_SAMPLES;
   letSamples = LET_DECLARATION_SAMPLES;
+  constSamples = CONST_DECLARATION_SAMPLES;
 
   constructor() { }
 

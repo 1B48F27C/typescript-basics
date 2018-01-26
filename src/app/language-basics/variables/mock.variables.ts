@@ -1,36 +1,5 @@
 export const VAR_DECLARATION_SAMPLES: string[] = [
     `var a = 10;`,    
-    `function f() {
-        var message = "Hello, world!";
-        return message;
-    }
-
-    function f() {
-        var a = 10;
-        return function g() {
-            var b = a + 1;
-            return b;
-        }
-    }
-    
-    var g = f();
-    g(); // returns '11'
-    
-    function f() {
-        var a = 1;
-        
-        a = 2;
-        var b = g();
-        a = 3;
-        
-        return b;
-        
-        function g() {
-            return a;
-        }
-    }
-    
-    f(); // returns '2'`,
     `// scoping rules
     
     function f(shouldInitialize: boolean) {
@@ -42,8 +11,9 @@ export const VAR_DECLARATION_SAMPLES: string[] = [
     }
     
     f(true);  // returns '10'
-    f(false); // returns 'undefined'
-    
+    f(false); // returns 'undefined'`,
+    `// example of overwriting 'i' variable because of leaked scope
+
     function sumMatrix(matrix: number[][]) {
         var sum = 0;
         for (var i = 0; i < matrix.length; i++) {
@@ -55,11 +25,14 @@ export const VAR_DECLARATION_SAMPLES: string[] = [
         
         return sum;
     }`,
-    `// Variable capturing quirks
+    `// variable capturing quirks
+
+// this loop will return only 10 instead of a set of numbers (0 .. 9)
     for (var i = 0; i < 10; i++) {
         setTimeout(function() { console.log(i); }, 100 * i);
     }
 
+// this is how to fix the problem
     for (var i = 0; i < 10; i++) {
         // capture the current state of 'i'
         // by invoking a function with its current value
@@ -83,29 +56,46 @@ export const LET_DECLARATION_SAMPLES: string[] = [
         
         // Error: 'b' doesn't exist here
         return b;
-    }
-    
-    try {
-        throw "oh no!";
-    }
-    catch (e) {
-        console.log("Oh well.");
-    }
-    
-    // Error: 'e' doesn't exist here
-    console.log(e);
+    }`,
+    `// declaration restriction
     
     a++; // illegal to use 'a' before it's declared;
-    let a;
-    
+    let a;`
+    ,
+    `// another example of 'let' declaration restriction
+
     function foo() {
         // okay to capture 'a'
         return a;
     }
     
-    // illegal call 'foo' before 'a' is declared
+// illegal call 'foo' before 'a' is declared
     // runtimes should throw an error here
     foo();
     
     let a;`
+];
+
+export const CONST_DECLARATION_SAMPLES: string[] = [
+    `const numLivesForCat = 9;`,
+    `// here is an tricky sample with object
+// you can't re-assing const object
+// but can its values
+    
+    const kitty = {
+        name: "Aurora",
+        numLives: numLivesForCat
+    }
+    
+    // Error
+    kitty = {
+        name: "Danielle",
+        numLives: numLivesForCat
+    };
+    
+    // all "okay"
+    kitty.name = "Rory";
+    kitty.name = "Kitty";
+    kitty.name = "Cat";
+    kitty.numLives--;`
 ];

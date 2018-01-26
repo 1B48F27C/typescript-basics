@@ -12,13 +12,17 @@ export const CODESAMPLES: string[] = [
 
     let color: string = "blue";
     color = 'red';
+
+// two way of defining multi-row value with accessing to variables
+
     let fullName: string = \`Bob Bobbington\`;
     let age: number = 37;
-    let sentence: string = \`Hello, my name is \${ fullName }.
+
+    let sentence-way-1: string = \`Hello, my name is \${ fullName }.
     
     I'll be \${ age + 1 } years old next month.\`;
     
-    let sentence: string = "Hello, my name is " + fullName + ".\\n\\n" +
+    let sentence-way-2: string = "Hello, my name is " + fullName + ".\\n\\n" +
     "I'll be " + (age + 1) + " years old next month.";`,
     `// array
     
@@ -26,42 +30,36 @@ export const CODESAMPLES: string[] = [
     let list: Array<number> = [1, 2, 3];`,
     `// tuple
     
-    // Declare a tuple type
+// declaration and initialization
+
     let x: [string, number];
-    // Initialize it
     x = ["hello", 10]; // OK
-    // Initialize it incorrectly
-    x = [10, "hello"]; // Error
+
+// samples of usage
     
     console.log(x[0].substr(1)); // OK
-    console.log(x[1].substr(1)); // Error, 'number' does not have 'substr'
-    
-    x[3] = "world"; // OK, 'string' can be assigned to 'string | number'
-    
+    x[3] = "world"; // OK, 'string' can be assigned to 'string | number'    
     console.log(x[5].toString()); // OK, 'string' and 'number' both have 'toString'
-    
-    x[6] = true; // Error, 'boolean' isn't 'string | number'`,
+
+// samples of wrong usage
+
+    x = [10, "hello"]; // Error
+    console.log(x[1].substr(1)); // Error, 'number' does not have 'substr'
+    x[6] = true; // Error, 'boolean' isn't 'string | number'
+    `,
     `// enum
     
-    enum Color {Red, Green, Blue}
-    let c: Color = Color.Green;
-    
     enum Color {Red = 1, Green, Blue}
-    let c: Color = Color.Green;
-    
-    enum Color {Red = 1, Green = 2, Blue = 4}
-    let c: Color = Color.Green;
-    
-    enum Color {Red = 1, Green, Blue}
-    let colorName: string = Color[2];
+    let c: Color = Color.Blue;
+    let colorName: string = Color[2];    
     
     alert(colorName); // Displays 'Green' as it's value is 2 above`,
     `// any
     
     let notSure: any = 4;
     notSure = "maybe a string instead";
-    notSure = false; // okay, definitely a boolean
-    
+    notSure = false;
+
     let notSure: any = 4;
     notSure.ifItExists(); // okay, ifItExists might exist at runtime
     notSure.toFixed(); // okay, toFixed exists (but the compiler doesn't check)
@@ -79,29 +77,26 @@ export const CODESAMPLES: string[] = [
     }
 
     let unusable: void = undefined;`,
-    `// null and undefined    
+    `// null and undefined
     
-    // Not much else we can assign to these variables!
     let u: undefined = undefined;
     let n: null = null;`,
-
     `// never
     
-    // Function returning never must have unreachable end point
+// function returning never must have unreachable end point
     function error(message: string): never {
         throw new Error(message);
     }
-    
-    // Inferred return type is never
-    function fail() {
-        return error("Something failed");
-    }
-    
-    // Function returning never must have unreachable end point
+
     function infiniteLoop(): never {
         while (true) {
             
         }
+    }
+    
+// inferred return type is never
+    function fail() {
+        return error("Something failed");
     }`,
     `// type assertion
     
