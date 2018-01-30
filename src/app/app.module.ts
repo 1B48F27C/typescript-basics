@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import {PanelMenuModule} from 'primeng/panelmenu';
-import {MenuItem} from 'primeng/api';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
@@ -122,8 +120,7 @@ export class MaterialModule {}
     MaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    AppRoutingModule,
-    PanelMenuModule
+    AppRoutingModule
   ],
   entryComponents: [SidenavComponent],
   providers: [],
