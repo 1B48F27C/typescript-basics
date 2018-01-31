@@ -1,3 +1,8 @@
+.menu-items {
+  font-family: 'Snowburst One';
+  font-size: 18px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -21,8 +26,7 @@ h1.app-name {
 }
 
 .sidenav-container {
-  flex: 1;
-  box-shadow: 10px 10px 10px 10px grey;
+  flex: 1;  
 }
 
 .is-mobile .sidenav-container {
@@ -30,7 +34,7 @@ h1.app-name {
 }
 
 .sidenav {
-  box-shadow: 10px 1px 10px rgba(0, 0, 0, .5);
+  box-shadow: 3px 3px 3px lightgray;
 }
 
 .ts-logo {

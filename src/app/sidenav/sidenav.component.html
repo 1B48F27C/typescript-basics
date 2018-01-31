@@ -6,13 +6,25 @@
     </a>
   </mat-toolbar>
 
-  <mat-sidenav-container class="sidenav-container"
-                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
-                 class="sidenav">
+  <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
+      class="sidenav">
       <mat-nav-list>
-        <!-- menu place here -->
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="menu-items">
+                Concepts
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+              <a mat-list-item routerLink="/basictypes" class="menu-items">Basic Types</a>
+              <a mat-list-item routerLink="/variables" class="menu-items">Variables Declaration</a>
+              <a mat-list-item routerLink="/interfaces" class="menu-items">Interfaces</a>
+            </mat-nav-list>
+          </mat-expansion-panel>
+        </mat-accordion>
+
       </mat-nav-list>
     </mat-sidenav>
 
