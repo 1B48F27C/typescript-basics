@@ -11,7 +11,7 @@
       class="sidenav">
       <mat-nav-list>
         <mat-accordion>
-          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel [expanded]="true">
             <mat-expansion-panel-header>
               <mat-panel-title class="menu-items">
                 <i class="zmdi zmdi-book"> Concepts</i>
@@ -21,6 +21,18 @@
               <a mat-list-item routerLink="/basictypes" class="menu-items">Basic Types</a>
               <a mat-list-item routerLink="/variables" class="menu-items">Variables Declaration</a>
               <a mat-list-item routerLink="/interfaces" class="menu-items">Interfaces</a>
+            </mat-nav-list>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="false">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="menu-items">
+                <i class="zmdi zmdi-shape"> Samples</i>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+              <a mat-list-item class="menu-items">OOP</a>
+              <a mat-list-item class="menu-items">Sorting</a>
+              <a mat-list-item class="menu-items">Math</a>
             </mat-nav-list>
           </mat-expansion-panel>
         </mat-accordion>
