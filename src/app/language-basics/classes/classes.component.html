@@ -1,3 +1,22 @@
-<p>
-  classes works!
-</p>
+<div class="body-content">
+  <h2>Classes</h2>  
+  <hr>  
+  <p>Traditional JavaScript uses functions and prototype-based inheritance to build 
+    up reusable components, but this may feel a bit awkward to programmers more comfortable 
+    with an object-oriented approach, where classes inherit functionality and objects
+    are built from these classes. Starting with ECMAScript 2015, also known as ECMAScript 6, 
+    JavaScript programmers will be able to build their applications using this object-oriented 
+    class-based approach. In TypeScript, we allow developers to use these techniques now, and 
+    compile them down to JavaScript that works across all major browsers and platforms, without 
+    having to wait for the next version of JavaScript.</p>    
+  <p>TypeScript supports common object-oriented patterns.Also it's possible to use modifiers, such as
+    public, private, protected and static. The way of usage modifiers is completele the same as in
+    C# and Java.</p>    
+  <p>Below provided code samples of usage these language-features.</p>
+  <div *ngFor="let codeSample of codeSamples">
+    <div class="code-place">
+      <pre>{{codeSample}}</pre>
+    </div>
+    <br>
+  </div>
+</div>
