@@ -1,17 +1,5 @@
 export const VAR_DECLARATION_SAMPLES: string[] = [
     `var a = 10;`,    
-    `// scoping rules
-    
-    function f(shouldInitialize: boolean) {
-        if (shouldInitialize) {
-            var x = 10;
-        }
-        
-        return x;
-    }
-    
-    f(true);  // returns '10'
-    f(false); // returns 'undefined'`,
     `// example of overwriting 'i' variable because of leaked scope
 
     function sumMatrix(matrix: number[][]) {
