@@ -48,7 +48,6 @@ import { ClassesComponent } from './language-basics/classes/classes.component';
 import { FunctionsComponent } from './language-basics/functions/functions.component';
 import { GenericsComponent } from './language-basics/generics/generics.component';
 import { EnumsComponent } from './language-basics/enums/enums.component';
-import { ManipulationsComponent } from './language-basics/manipulations/manipulations.component';
 import { SymbolsComponent } from './language-basics/symbols/symbols.component';
 import { IteratorsComponent } from './language-basics/iterators/iterators.component';
 import { ModulesComponent } from './language-basics/modules/modules.component';
@@ -104,8 +103,7 @@ export class MaterialModule {}
     ClassesComponent,
     FunctionsComponent,
     GenericsComponent,
-    EnumsComponent,
-    ManipulationsComponent,
+    EnumsComponent,    
     SymbolsComponent,
     IteratorsComponent,
     ModulesComponent,

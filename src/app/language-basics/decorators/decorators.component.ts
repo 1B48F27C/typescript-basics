@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CODESAMPLES } from './mock.basic-types';
 
 @Component({
   selector: 'app-decorators',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DecoratorsComponent implements OnInit {
 
+  codeSamples = CODESAMPLES;
+  
   constructor() { }
 
   ngOnInit() {

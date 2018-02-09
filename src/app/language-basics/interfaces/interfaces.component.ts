@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CODE_SAMPLES } from './mock.basic-types';
+import { CODE_SAMPLES } from './mock.interfaces';
 
 @Component({
   selector: 'app-interfaces',

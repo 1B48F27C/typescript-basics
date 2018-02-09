@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CODESAMPLES } from './mock.enums';
 
 @Component({
   selector: 'app-enums',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./enums.component.css']
 })
 export class EnumsComponent implements OnInit {
+
+  codeSamples = CODESAMPLES;
 
   constructor() { }
 

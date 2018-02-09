@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CODESAMPLES } from './mock.modules';
 
 @Component({
   selector: 'app-modules',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modules.component.css']
 })
 export class ModulesComponent implements OnInit {
+
+  codeSamples = CODESAMPLES;
 
   constructor() { }
 

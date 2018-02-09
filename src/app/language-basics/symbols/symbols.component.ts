@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CODESAMPLES } from './mock.symbols';
 
 @Component({
   selector: 'app-symbols',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./symbols.component.css']
 })
 export class SymbolsComponent implements OnInit {
+
+  codeSamples = CODESAMPLES;
 
   constructor() { }
 

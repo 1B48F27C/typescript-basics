@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CODESAMPLES } from './mock.generics';
 
 @Component({
   selector: 'app-generics',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./generics.component.css']
 })
 export class GenericsComponent implements OnInit {
+
+  codeSamples = CODESAMPLES;
 
   constructor() { }
 
